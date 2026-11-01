@@ -491,19 +491,19 @@ img {
 }
 
 .floating-card--price {
-  top: 24px;
-  right: 8px;
+  top: 8px;
+  right: 0;
 }
 
 .floating-card--address {
-  bottom: 32px;
-  left: 0;
+  bottom: 8px;
+  left: -8px;
   animation-delay: 1.2s;
 }
 
 .floating-card--feature {
-  bottom: -8px;
-  right: 24px;
+  top: 46%;
+  right: -8px;
   animation-delay: 2.4s;
 }
 
@@ -570,13 +570,15 @@ img {
   letter-spacing: 0.02em;
 }
 
+/* Сдвиг ровно на один повтор текста (в разметке 6 одинаковых
+   копий), поэтому цикл стыкуется без видимого рывка */
 @keyframes marquee {
   from {
     transform: translateX(0);
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translateX(calc(-100% / 6));
   }
 }
 
@@ -1381,22 +1383,41 @@ img {
   }
 
   .floating-card {
-    padding: 10px 14px;
+    gap: 10px;
+    padding: 10px 12px;
+  }
+
+  .floating-card__icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .floating-card__icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .floating-card__text {
+    font-size: 12px;
+  }
+
+  .floating-card__text strong {
+    font-size: 13px;
   }
 
   .floating-card--price {
-    top: 0;
+    top: -4px;
     right: 0;
   }
 
   .floating-card--address {
-    bottom: 0;
-    left: 0;
+    right: 0;
+    bottom: -4px;
+    left: auto;
   }
 
   .floating-card--feature {
-    bottom: 12%;
-    right: 0;
+    inset: 44% auto auto -4px;
   }
 
   .services__grid,
