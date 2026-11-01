@@ -1,0 +1,20 @@
+{
+  "name": "sewing-atelier-template",
+  "version": "1.0.0",
+  "description": "Шаблон сайта для швейного ателье",
+  "scripts": {
+    "lint:html": "html-validate index.html",
+    "lint:css": "stylelint css/*.css",
+    "lint:js": "eslint js/*.js",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js"
+  },
+  "keywords": ["html", "css", "js", "template", "atelier"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "html-validate": "^8.0.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "eslint": "^8.0.0"
+  }
+}
